@@ -1,0 +1,334 @@
+/**Variables**/
+html, body {
+  font-family: "PT Serif Caption", serif;
+  box-sizing: border-box;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.jungle {
+  font-weight: bolder;
+  font-size: 3em;
+  padding: 2%;
+}
+
+.bg-img {
+  background-image: url("../img/top.jpg");
+  min-height: 380px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.container-nav {
+  position: absolute;
+  margin: 20px;
+  width: auto;
+}
+
+/**Nesting**/
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #1E1A19;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  color: #F4F4F4;
+}
+
+.containers {
+  position: relative;
+  text-align: center;
+}
+
+.phrase, .light, .dark {
+  text-transform: capitalize;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+}
+
+/**Inheritance**/
+.dark {
+  color: black;
+  opacity: 0.8;
+}
+
+.light {
+  color: dark_black;
+}
+
+.background {
+  height: 100vh;
+  width: 100%;
+}
+
+.anchor {
+  opacity: 0.6;
+  background-color: light_white;
+}
+
+.anchor:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.anchor:focus {
+  color: light_white;
+}
+
+.info-box {
+  width: 100%;
+  height: 100vh;
+}
+
+.bio {
+  padding: 10%;
+  font-size: 1.5em;
+}
+
+.gallery-container {
+  padding: 2%;
+}
+
+.gallery-box {
+  width: 300px;
+  height: 500px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.gallery-box .gallery-item {
+  flex: 1;
+  height: 100%;
+}
+
+.gallery-item:hover {
+  transform: scale(1.2);
+}
+
+.symbol-img {
+  width: 15vw;
+  height: 30vh;
+}
+
+.symbols {
+  padding-top: 10%;
+  padding-left: 28%;
+  padding-right: 28%;
+  font-size: 0.9em;
+  text-align: center;
+  color: grey;
+}
+
+.watcher {
+  color: grey;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+th {
+  width: 40%;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 4%;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 2%;
+}
+
+table img {
+  display: block;
+  margin: auto;
+}
+
+table img:hover {
+  transform: scale(1.1);
+}
+
+table {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+  font-size: 1em;
+  padding: 2%;
+  text-decoration: none;
+  color: #343333;
+  text-transform: lowercase;
+}
+
+.bio p {
+  text-align: justify;
+  padding-left: 13%;
+  padding-top: 6%;
+  font-size: 0.6em;
+  color: gray;
+}
+
+.artist::selection {
+  color: #898483;
+  background: #ECE8E7;
+}
+
+.work-selector {
+  padding-top: 30%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  font-size: 2em;
+  letter-spacing: 0.2em;
+  padding-top: 20%;
+  text-align: center;
+}
+
+/**Responsive breakpoint**/
+@media (max-width: 576px) {
+  .background {
+    height: 100vh;
+    width: auto;
+  }
+
+  .phrase, .dark, .light {
+    padding: 2%;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  .jungle {
+    font-size: 1.1em;
+    padding: 3%;
+  }
+
+  .bio {
+    position: relative;
+    top: 20%;
+  }
+
+  .bio p {
+    font-size: 0.5em;
+  }
+
+  .rune {
+    width: 40%;
+  }
+
+  .gallery-box {
+    width: 350px;
+    height: 500px;
+  }
+
+  .gallery-item {
+    padding: 4%;
+  }
+
+  .gallery-container {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .work-selector {
+    padding-top: 30%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    font-size: 1.3em;
+    letter-spacing: 0.2em;
+    padding-top: 40%;
+    text-align: center;
+  }
+
+  .bg-img {
+    width: auto;
+    height: auto;
+    min-height: auto;
+  }
+
+  .symbols {
+    padding-top: 30%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 5%;
+    font-size: 0.6em;
+  }
+
+  table {
+    width: 80%;
+  }
+
+  th {
+    text-align: center;
+    font-size: 1em;
+  }
+  th td {
+    padding: 0;
+  }
+
+  .symbol-img {
+    width: auto;
+    height: auto;
+  }
+
+  td h5 {
+    font-size: 0.9em;
+    text-align: center;
+    font-weight: bold;
+  }
+  td p {
+    font-size: 0.7em;
+    text-align: left;
+  }
+
+  .topnav a {
+    font-size: 15px;
+  }
+
+  .containers img {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .watcher {
+    font-size: 0.5em;
+    padding-bottom: 4%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
